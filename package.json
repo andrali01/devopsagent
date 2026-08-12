@@ -1,0 +1,26 @@
+{
+  "name": "devops-agent-platform",
+  "version": "1.0.0",
+  "description": "Plataforma de IaC (AWS CDK) para AWS DevOps Agent + aplicacao de exemplo - Act Digital",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "synth": "cdk synth --all",
+    "diff": "cdk diff --all",
+    "deploy": "cdk deploy --all --require-approval never",
+    "destroy": "cdk destroy --all"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "aws-cdk": "^2.150.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "source-map-support": "^0.5.21"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.150.0",
+    "constructs": "^10.3.0"
+  }
+}

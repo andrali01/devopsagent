@@ -1,0 +1,58 @@
+name: Destroy DevOps Agent Platform (manual)
+
+# Este workflow NUNCA roda automaticamente - so pode ser disparado a mao,
+# e exige que a pessoa digite a palavra DESTROY no input de confirmacao.
+# Recomendado: configure este workflow para usar um GitHub Environment com
+# "required reviewers" no ambiente de producao, para exigir aprovacao
+# humana adicional antes da execucao.
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Ambiente a destruir'
+        required: true
+        type: choice
+        options: [prod, nonprod]
+      confirm:
+        description: 'Digite DESTROY (maiusculas) para confirmar'
+        required: true
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  guard:
+    name: Validar confirmacao
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checar palavra de confirmacao
+        if: ${{ github.event.inputs.confirm != 'DESTROY' }}
+        run: |
+          echo "::error::Confirmacao invalida. Digite exatamente DESTROY para prosseguir. Execucao abortada."
+          exit 1
+
+  destroy:
+    name: CDK Destroy
+    needs: guard
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Configurar credenciais AWS via OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - name: CDK Destroy
+        run: npx cdk destroy --force -c env=${{ github.event.inputs.environment }} --all
