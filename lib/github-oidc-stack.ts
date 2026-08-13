@@ -3,39 +3,16 @@ import { Construct } from 'constructs';
 import * as iam from 'aws-cdk-lib/aws-iam';
 
 export interface GithubOidcStackProps extends cdk.StackProps {
-  /** Organizacao ou usuario do GitHub (ex.: "act-digital"). */
   githubOrg: string;
-  /** Nome do repositorio (ex.: "devops-agent-platform"). */
   githubRepo: string;
 }
 
-/**
- * Stack de BOOTSTRAP - deploy manual, uma unica vez por conta, ANTES de
- * configurar o pipeline de CI/CD.
- *
- * Cria o OIDC provider do GitHub Actions (se ainda nao existir na conta) e
- * uma IAM role que o workflow do GitHub assume via
- * `aws-actions/configure-aws-credentials`, sem nenhuma chave de acesso
- * estatica armazenada como secret do repositorio - GitHub Actions troca um
- * JWT assinado pelo próprio GitHub por credenciais temporarias via STS.
- *
- * IMPORTANTE: a policy anexada aqui e propositalmente ampla o suficiente
- * para operacoes de `cdk deploy`/`cdk destroy` deste projeto especifico.
- * Para producao real, restrinja os `resources` por ARN e remova acoes que
- * o pipeline nao usa - trate isto como ponto de partida, nao como policy
- * final (ver Modulo 6.4 do material: menor privilegio, revisao periodica).
- */
 export class GithubOidcStack extends cdk.Stack {
   public readonly deployRole: iam.Role;
 
   constructor(scope: Construct, id: string, props: GithubOidcStackProps) {
     super(scope, id, props);
 
-    // Cria o provider apenas se ainda nao existir uma instancia na conta.
-    // Uma conta AWS so pode ter UM OIDC provider por URL de emissor - se
-    // voce ja tem um provider do GitHub Actions criado por outro projeto,
-    // substitua este bloco por
-    // iam.OpenIdConnectProvider.fromOpenIdConnectProviderArn(...).
     const provider = new iam.OpenIdConnectProvider(this, 'GithubOidcProvider', {
       url: 'https://token.actions.githubusercontent.com',
       clientIds: ['sts.amazonaws.com'],
@@ -50,24 +27,42 @@ export class GithubOidcStack extends cdk.Stack {
           'token.actions.githubusercontent.com:aud': 'sts.amazonaws.com',
         },
         StringLike: {
-          // Restringe a role a esse repositorio especifico. Ajuste o padrao
-          // (ex.: ":ref:refs/heads/main") se quiser restringir tambem por
-          // branch, o que é recomendado para o workflow de destroy.
-          //'token.actions.githubusercontent.com:sub': `repo:${props.githubOrg}/${props.githubRepo}:*`,
           'token.actions.githubusercontent.com:sub': `repo:${props.githubOrg}@*/${props.githubRepo}@*:*`,
         },
       }),
       maxSessionDuration: cdk.Duration.hours(1),
     });
 
+    const stackArnPattern = `arn:aws:cloudformation:${this.region}:${this.account}:stack/Ecommerce*/*`;
+    const iamRoleArnPattern = `arn:aws:iam::${this.account}:role/*`;
+    const lambdaArnPattern = `arn:aws:lambda:${this.region}:${this.account}:function:EcommerceProductsFunction-*`;
+    const dynamoDbArnPattern = `arn:aws:dynamodb:${this.region}:${this.account}:table/EcommerceProducts-*`;
+    const cdkAssetsBucketPattern = `arn:aws:s3:::cdk-hnb659fds-assets-${this.account}-${this.region}*`;
+    const cdkBootstrapParamPattern = `arn:aws:ssm:${this.region}:${this.account}:parameter/cdk-bootstrap/*`;
+
     this.deployRole.addToPolicy(
       new iam.PolicyStatement({
-        sid: 'CdkDeployPermissions',
+        sid: 'CdkDeployCloudFormationAndCompute',
+        effect: iam.Effect.ALLOW,
+        actions: ['cloudformation:*', 'lambda:*'],
+        resources: [stackArnPattern, lambdaArnPattern],
+      })
+    );
+
+    this.deployRole.addToPolicy(
+      new iam.PolicyStatement({
+        sid: 'CdkDeployDynamoDb',
+        effect: iam.Effect.ALLOW,
+        actions: ['dynamodb:*'],
+        resources: [dynamoDbArnPattern],
+      })
+    );
+
+    this.deployRole.addToPolicy(
+      new iam.PolicyStatement({
+        sid: 'CdkDeployIam',
         effect: iam.Effect.ALLOW,
         actions: [
-          // CloudFormation - motor por tras do cdk deploy/destroy
-          'cloudformation:*',
-          // IAM - criacao das roles do DevOps Agent e da propria role de deploy
           'iam:CreateRole',
           'iam:DeleteRole',
           'iam:GetRole',
@@ -80,19 +75,35 @@ export class GithubOidcStack extends cdk.Stack {
           'iam:TagRole',
           'iam:ListRolePolicies',
           'iam:ListAttachedRolePolicies',
-          // Recursos da aplicacao de exemplo
-          'lambda:*',
-          'dynamodb:*',
-          'apigateway:*',
-          // AWS DevOps Agent
-          'devops-agent:*',
-          'aidevops:*',
-          // Bucket de assets do CDK e parametros de bootstrap
-          's3:*',
-          'ssm:GetParameter',
-          'ssm:GetParameters',
         ],
+        resources: [iamRoleArnPattern],
+      })
+    );
+
+    this.deployRole.addToPolicy(
+      new iam.PolicyStatement({
+        sid: 'CdkDeployDevOpsAgentAndApiGateway',
+        effect: iam.Effect.ALLOW,
+        actions: ['devops-agent:*', 'aidevops:*', 'apigateway:*'],
         resources: ['*'],
+      })
+    );
+
+    this.deployRole.addToPolicy(
+      new iam.PolicyStatement({
+        sid: 'CdkBootstrapAssets',
+        effect: iam.Effect.ALLOW,
+        actions: ['s3:*'],
+        resources: [cdkAssetsBucketPattern],
+      })
+    );
+
+    this.deployRole.addToPolicy(
+      new iam.PolicyStatement({
+        sid: 'CdkBootstrapParameters',
+        effect: iam.Effect.ALLOW,
+        actions: ['ssm:GetParameter', 'ssm:GetParameters'],
+        resources: [cdkBootstrapParamPattern],
       })
     );
 

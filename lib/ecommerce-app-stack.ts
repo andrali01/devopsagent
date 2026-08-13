@@ -11,20 +11,6 @@ export interface EcommerceAppStackProps extends cdk.StackProps {
   config: EnvConfig;
 }
 
-/**
- * Aplicacao de exemplo usada para gerar telemetria real para o AWS DevOps
- * Agent investigar. Arquitetura: API Gateway (HTTP API) -> Lambda -> DynamoDB.
- *
- * Diferencas deliberadas em relacao ao laboratorio manual:
- * - DynamoDB em PAY_PER_REQUEST (nao PROVISIONED 1/1) - essa configuracao
- *   minima so fazia sentido para forcar throttling em teste; em qualquer
- *   ambiente real, on-demand e a escolha correta por padrao.
- * - Codigo da Lambda como asset versionado (lambda/products/index.js), nao
- *   inline no template - mais facil de revisar, testar e versionar.
- * - RemovalPolicy.DESTROY na tabela é adequado para lab/dev. Trocar para
- *   RETAIN (ou RETAIN_ON_UPDATE_OR_DELETE) antes de usar em produção real
- *   com dados que importam.
- */
 export class EcommerceAppStack extends cdk.Stack {
   public readonly apiUrl: string;
   public readonly tableName: string;
@@ -39,9 +25,10 @@ export class EcommerceAppStack extends cdk.Stack {
       tableName: `EcommerceProducts-${config.envName}`,
       partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
-      // ATENCAO: DESTROY apaga a tabela (e os dados) ao rodar `cdk destroy`.
-      // Adequado para laboratorio/dev. Mude para RETAIN em produção real.
-      removalPolicy: cdk.RemovalPolicy.DESTROY,
+      removalPolicy: cdk.RemovalPolicy.RETAIN,
+      pointInTimeRecoverySpecification: {
+        pointInTimeRecoveryEnabled: true,
+      },
     });
 
     const fn = new lambda.Function(this, 'ProductsFunction', {
