@@ -53,7 +53,8 @@ export class GithubOidcStack extends cdk.Stack {
           // Restringe a role a esse repositorio especifico. Ajuste o padrao
           // (ex.: ":ref:refs/heads/main") se quiser restringir tambem por
           // branch, o que é recomendado para o workflow de destroy.
-          'token.actions.githubusercontent.com:sub': `repo:${props.githubOrg}/${props.githubRepo}:*`,
+          //'token.actions.githubusercontent.com:sub': `repo:${props.githubOrg}/${props.githubRepo}:*`,
+          'token.actions.githubusercontent.com:sub': `repo:${props.githubOrg}@*/${props.githubRepo}@*:*`,
         },
       }),
       maxSessionDuration: cdk.Duration.hours(1),
