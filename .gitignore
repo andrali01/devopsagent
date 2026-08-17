@@ -7,3 +7,6 @@ cdk.out
 *.log
 .env
 .DS_Store
+
+cdk-nag-output.txt
+cloudtrail-*.json
