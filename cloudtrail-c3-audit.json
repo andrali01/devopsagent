@@ -1,0 +1,291 @@
+{
+    "Events": [
+        {
+            "EventId": "26d7e916-a73d-324b-94ab-76664f1cc9c3",
+            "EventName": "AssumeRole",
+            "ReadOnly": "true",
+            "EventTime": "2026-08-13T15:48:23-03:00",
+            "EventSource": "sts.amazonaws.com",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::IAM::AccessKey",
+                    "ResourceName": "ASIAWZRLANQHGGL6B7IU"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::IAM::Role",
+                    "ResourceName": "arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW"
+                }
+            ],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AWSService\",\"invokedBy\":\"lambda.amazonaws.com\"},\"eventTime\":\"2026-08-13T18:48:23Z\",\"eventSource\":\"sts.amazonaws.com\",\"eventName\":\"AssumeRole\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"lambda.amazonaws.com\",\"userAgent\":\"lambda.amazonaws.com\",\"requestParameters\":{\"roleArn\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\",\"roleSessionName\":\"EcommerceProductsFunction-prod\"},\"responseElements\":{\"credentials\":{\"accessKeyId\":\"ASIAWZRLANQHGGL6B7IU\",\"sessionToken\":\"IQoJb3JpZ2luX2VjECMaCXVzLWVhc3QtMSJHMEUCIE7JACP8gfVdg4qL1NNgSiL31cEmbh9MG/+z6hKQbpk/AiEA+7l6lN1q/q6HZSTFf/vNu3k4+gLyWb50xx7pHQKwgB8qrAII7P//////////ARAAGgw0NjcxNjc4OTg2MzgiDGcUQc2GMN/B0CzivCqAAraT/cTGB/y7IUCtNMHFSXid908PiScOVtHHJex4/KlCQHpslnb4edgwA7hI2WOW5FyEUF3aFW3D5sepZ8fBVjh+R9ta7MA2V5l/5lOS3cAV6q3WWzjXDUYu/YfKKDM8XdG3svdhVNfuNLYGXvbjlPUHDpuCGh9tN9W+B6f5L168/pzbu2d1TOON6fekKHN+jjQNhxop/NPg/Nl8VVEQaiR88ZR35tD/3dQ74sppQe7FyCmtFVd3ODZ45e87yV/J7yd+8WUfK6BtPUmSq2RA7tFrfcCQfdtX60b3EPwRywgzAnFwmJm5l47uwsPdVeNr2cT5RB8RM78KZlhb/wNsVJ0w96L40wY6mgFWLgfrKhoehTtYOiZYnDyP6r+r2Hme1hLtXwfrQdJoRhPUKBUjofbL0WjV94S5Nq2MIDSYfDGv/mqjQccDoX34gM9qqzX+g3zoSYWBijUpRPLibv2LVj3jx8KfyTG8+SbNFaqtrO+5DupXJFBrIgnwIlrd3ctzsFJO2PnlhceSihzjF89yupcNv082Nx+/QqtF9kyHTMNwhrC4\",\"expiration\":\"2026-08-14T06:48:23Z\"},\"assumedRoleUser\":{\"assumedRoleId\":\"AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod\",\"arn\":\"arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod\"},\"packedPolicySize\":1},\"additionalEventData\":{\"ExtendedRequestId\":\"MTpJQUQ6QToxNzg2NjQ2OTAzNDM1OlpqRzkzZUU5\"},\"requestID\":\"d80eb7c7-8340-4e22-a992-98bd135d5c9a\",\"eventID\":\"26d7e916-a73d-324b-94ab-76664f1cc9c3\",\"readOnly\":true,\"resources\":[{\"accountId\":\"467167898638\",\"type\":\"AWS::IAM::Role\",\"ARN\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\"}],\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"467167898638\",\"sharedEventID\":\"0269ed02-0920-4035-860b-7155657bf142\",\"eventCategory\":\"Management\"}"
+        },
+        {
+            "EventId": "6e278481-7f57-3dd6-bb37-97f1718a3e48",
+            "EventName": "AssumeRole",
+            "ReadOnly": "true",
+            "EventTime": "2026-08-13T15:48:23-03:00",
+            "EventSource": "sts.amazonaws.com",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::IAM::AccessKey",
+                    "ResourceName": "ASIAWZRLANQHJM7MH37Z"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::IAM::Role",
+                    "ResourceName": "arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW"
+                }
+            ],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AWSService\",\"invokedBy\":\"lambda.amazonaws.com\"},\"eventTime\":\"2026-08-13T18:48:23Z\",\"eventSource\":\"sts.amazonaws.com\",\"eventName\":\"AssumeRole\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"lambda.amazonaws.com\",\"userAgent\":\"lambda.amazonaws.com\",\"requestParameters\":{\"roleArn\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\",\"roleSessionName\":\"EcommerceProductsFunction-prod\"},\"responseElements\":{\"credentials\":{\"accessKeyId\":\"ASIAWZRLANQHJM7MH37Z\",\"sessionToken\":\"IQoJb3JpZ2luX2VjECMaCXVzLWVhc3QtMSJHMEUCIQCHnpMdb2tF/IMbm5+anl4v5qOTH2zlCTKbLze75zkcIgIgelW/LsvzxhSB6FWvj9KQiNLqRyqvQAVwp6ZBOwftzrYqnAQI7P//////////ARAAGgw0NjcxNjc4OTg2MzgiDD0fhLLHJCpMZy5gjyrwA3dBeLq+VwWIlZZhKLHidfw5tDrkPadj/E+m8AZVUSiznIWzM5ZB/lXo9u1a/PCmheizL8ahj0GWtwQgH5EAVGB3oScnCraJkfAzguLvwsaaKtUdEyrsDrMpnKBw9Cs9R+WYFZO/6ajORPHFkh0wTnNJr8qUieZUzGwJ3O5RGs+6rOuK7ZfhThlGclImy11U9LNv1gbpoMsiYghCrSRP3TGViDMYuCzs9L2zhwmSLPGI5ymHBhMjoJDWLXj9MVV9RoRCkmp75BBxzmN1z415rWIq8vfnIUoCxm0vfggxXeJ63RiDf0TKgQLbQdlyKps1a8WNPTqQOPoxU6zApJgBSJ2n7Ki9kcscnWljLxYWfqqZf0KF255EYG848FKwMDGYNbACww8lfmuHuNggb++0wY/Lf0QI38PIPyVngz69zC/p+Cb8GNJ0RGHyDT/zGSvxhwETqqGiHYJR2Y7UvLW5t2iq+VnFbibaGxMcc0I16DJ0RHqpG7EJIh43EgI4DAk3VIwBCCDqezZNsmikpn5WnYyKHqFWYntrGG45Myg9aQUyKJpThJRcuhEuxkSE18hX4Dh/IdEPAIsm4Ym0OgLzKKkn2oBw5EiQBRDJJqpSjRWjat8i7VkA5SbgnK+/nek49icQliHoOGqBTRsMas/lOZkw96L40wY6ogG07utF0ZfhPYcjNz1vvO47Q7GnCgetrfz8JQsBq60VYf8DjMt06wRxIqy1OsMFh4oDTNVQRQ1AAksjHusFd/HoBYU2davMMhkIdGCNjbUrq/vWsK+c51Hm/vwmRt1+6u2ozMFWx8IX9fFKCl1/GILxb2JI17Hn2cAnvLlQgmOJtOJzKgeRp7boqf5P14+vK6Qwf+46U+h3REAihGBtD6UXZNg=\",\"expiration\":\"2026-08-14T06:48:23Z\"},\"assumedRoleUser\":{\"assumedRoleId\":\"AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod\",\"arn\":\"arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod\"},\"packedPolicySize\":1},\"additionalEventData\":{\"ExtendedRequestId\":\"MTpJQUQ6QToxNzg2NjQ2OTAzNDM1OmFQNlhCbm1H\"},\"requestID\":\"d80eb7c7-8340-4e22-a992-98bd135d5c9a\",\"eventID\":\"6e278481-7f57-3dd6-bb37-97f1718a3e48\",\"readOnly\":true,\"resources\":[{\"accountId\":\"467167898638\",\"type\":\"AWS::IAM::Role\",\"ARN\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\"}],\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"467167898638\",\"sharedEventID\":\"43a0ab0c-624f-4dc5-92fd-34ab24db9c41\",\"eventCategory\":\"Management\"}"
+        },
+        {
+            "EventId": "ece0f0f0-1914-4061-a533-0fb477957445",
+            "EventName": "UpdateFunctionCode20150331v2",
+            "ReadOnly": "false",
+            "AccessKeyId": "ASIAWZRLANQHJP2V5V3A",
+            "EventTime": "2026-08-13T15:48:05-03:00",
+            "EventSource": "lambda.amazonaws.com",
+            "Username": "botocore-session-1786645901",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::Lambda::Function",
+                    "ResourceName": "EcommerceProductsFunction-prod"
+                }
+            ],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROAWZRLANQHEJ2NEMOVK:botocore-session-1786645901\",\"arn\":\"arn:aws:sts::467167898638:assumed-role/OrganizationAccountAccessRole/botocore-session-1786645901\",\"accountId\":\"467167898638\",\"accessKeyId\":\"ASIAWZRLANQHJP2V5V3A\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROAWZRLANQHEJ2NEMOVK\",\"arn\":\"arn:aws:iam::467167898638:role/OrganizationAccountAccessRole\",\"accountId\":\"467167898638\",\"userName\":\"OrganizationAccountAccessRole\"},\"attributes\":{\"creationDate\":\"2026-08-13T18:31:37Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2026-08-13T18:48:05Z\",\"eventSource\":\"lambda.amazonaws.com\",\"eventName\":\"UpdateFunctionCode20150331v2\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"177.144.100.124\",\"userAgent\":\"aws-cli/2.36.19 md/awscrt#0.36.0 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.14.6 md/pyimpl#CPython m/n,o,Z,E,b,i cfg/retry-mode#standard md/installer#script-exe sid/d0a97e2b2c9a md/prompt#off md/command#lambda.update-function-code\",\"requestParameters\":{\"functionName\":\"EcommerceProductsFunction-prod\",\"publish\":false,\"dryRun\":false},\"responseElements\":{\"functionName\":\"EcommerceProductsFunction-prod\",\"functionArn\":\"arn:aws:lambda:us-east-1:467167898638:function:EcommerceProductsFunction-prod\",\"runtime\":\"nodejs24.x\",\"role\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\",\"handler\":\"index.handler\",\"codeSize\":635,\"description\":\"API de produtos (GET/POST) - app de teste para o AWS DevOps Agent\",\"timeout\":10,\"memorySize\":128,\"lastModified\":\"2026-08-13T18:48:05.000+0000\",\"codeSha256\":\"8hvShFBqxFScJLubfkTBq0VPsqyaqid+J2/Rcdp8qmM=\",\"version\":\"$LATEST\",\"environment\":{},\"tracingConfig\":{\"mode\":\"PassThrough\"},\"revisionId\":\"d338957d-58ae-4daa-a5e6-476bf2c2c7e7\",\"state\":\"Active\",\"lastUpdateStatus\":\"InProgress\",\"lastUpdateStatusReason\":\"The function is being created.\",\"lastUpdateStatusReasonCode\":\"Creating\",\"packageType\":\"Zip\",\"architectures\":[\"x86_64\"],\"ephemeralStorage\":{\"size\":512},\"snapStart\":{\"applyOn\":\"None\",\"optimizationStatus\":\"Off\"},\"runtimeVersionConfig\":{\"runtimeVersionArn\":\"arn:aws:lambda:us-east-1::runtime:adfa9c68b2b34ae1cba34f70c4369649bca17aea5fe29e10414b040bf256e6c6\"},\"loggingConfig\":{\"logFormat\":\"Text\",\"logGroup\":\"/aws/lambda/EcommerceProductsFunction-prod\"}},\"requestID\":\"208bc789-330f-4903-ba61-0e560e771136\",\"eventID\":\"ece0f0f0-1914-4061-a533-0fb477957445\",\"readOnly\":false,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"467167898638\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"lambda.us-east-1.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "118f80f1-a8c9-395d-8526-1af88aff1897",
+            "EventName": "AssumeRole",
+            "ReadOnly": "true",
+            "EventTime": "2026-08-13T15:30:29-03:00",
+            "EventSource": "sts.amazonaws.com",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::IAM::AccessKey",
+                    "ResourceName": "ASIAWZRLANQHOB3AJAPR"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::IAM::Role",
+                    "ResourceName": "arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW"
+                }
+            ],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AWSService\",\"invokedBy\":\"lambda.amazonaws.com\"},\"eventTime\":\"2026-08-13T18:30:29Z\",\"eventSource\":\"sts.amazonaws.com\",\"eventName\":\"AssumeRole\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"lambda.amazonaws.com\",\"userAgent\":\"lambda.amazonaws.com\",\"requestParameters\":{\"roleArn\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\",\"roleSessionName\":\"EcommerceProductsFunction-prod\"},\"responseElements\":{\"credentials\":{\"accessKeyId\":\"ASIAWZRLANQHOB3AJAPR\",\"sessionToken\":\"IQoJb3JpZ2luX2VjECMaCXVzLWVhc3QtMSJIMEYCIQDZCVPv/7wTAmRTSZwlGi0AMRnKkbRwp1MPMvxid12tiwIhAMxV+sp1AKIrTgjQRe/NapsHhogydN/oNUDAZ6Nx1KrSKpwECOz//////////wEQABoMNDY3MTY3ODk4NjM4Igxi3cqTdYVvCV8/VZUq8APkNlhOOYQJqr1J+sQGoseCeXh+aOWQwOF9ijQ+/ZLT+dp4MrMG/2RZohAwIWmj5Jmxa4hOoxeY/ZoBGjNFLUa3xUZRuf9//hqtcnVpFkhWR54nbHRiGO/Bc/rLOoD08ZStb7qiuT/l4nISJYu7HfSp8/HINvb1olKQ7k04jTrOnDW23zUjFs6+bxqvbeQRCVb1hAdMHlj3Au9B6HZTwOI0j4SMx8itmfkpaNPwV6rIuVnQdvDzGGmJlWjvD0jUUidDtZIryMBgPpu+PXgGnAJEwmBg7XmTDOdjUFXmG3Lb6FLQWS0TpJHakq7SLmeKdSXh06CbXRgBHrsR7jOjAbr1HA69vwsh7TbBMEQ5D9UJlF98cX3pfYeJwtzdr0zDO/5tuah157ZD4GCgBmPuIXoxx/voEpPYrbfca8FiS9iScfJar9snjVCZU5zQSiJcMOvjWYahSA4NaSiGXozrst2PJt2M1oft0GuhiqD9frU798icYACFUurcfBta+8ufIo/ADiR7f5OnrDD4K1MAMWT0j9q9CIp8qqzvgXyZ+MsMIgjo/Dmbn6Nlbs0IONglTTS21sUMzAYYbdGVta/+cMgPENnKraXuDodjGTcZmUUIpvLg11ygCRyvA4btHWKMwQuL39j0/NlgXD17Yk/3a4iwMMWa+NMGOqEBZWpXtZoifBIcFJKvod2NPgvaeXWDlyl29sPuy6Er/7DGUsZxIpMt1Bme/1efxt6BPdU2ZnXIwfJMXBJSqcjCtTBBwGhcvqd4/E2AOTB3VWMxnZiglwDswnKXOSO/ZqXqpHgxY5dUI+mRxj+h9i2sVffwii0S0m16kRMn6S3W1QyQZ1bY78p8UF5/KH81SeoFmrQxZZwbaJyFt3TfneMTWvc=\",\"expiration\":\"2026-08-14T06:30:29Z\"},\"assumedRoleUser\":{\"assumedRoleId\":\"AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod\",\"arn\":\"arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod\"},\"packedPolicySize\":1},\"additionalEventData\":{\"ExtendedRequestId\":\"MTpJQUQ6QToxNzg2NjQ1ODI5OTAzOkVaVHRJRkdw\"},\"requestID\":\"3bcca5fd-84e1-46b8-b16c-f2c370101127\",\"eventID\":\"118f80f1-a8c9-395d-8526-1af88aff1897\",\"readOnly\":true,\"resources\":[{\"accountId\":\"467167898638\",\"type\":\"AWS::IAM::Role\",\"ARN\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\"}],\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"467167898638\",\"sharedEventID\":\"618419b5-e79d-42ed-ab92-2c7960aebecc\",\"eventCategory\":\"Management\"}"
+        },
+        {
+            "EventId": "1d98cc49-d36d-3a23-a9b3-de1c723ffdec",
+            "EventName": "AssumeRole",
+            "ReadOnly": "true",
+            "EventTime": "2026-08-13T15:30:29-03:00",
+            "EventSource": "sts.amazonaws.com",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::IAM::AccessKey",
+                    "ResourceName": "ASIAWZRLANQHIAPCA2IW"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::IAM::Role",
+                    "ResourceName": "arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW"
+                }
+            ],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AWSService\",\"invokedBy\":\"lambda.amazonaws.com\"},\"eventTime\":\"2026-08-13T18:30:29Z\",\"eventSource\":\"sts.amazonaws.com\",\"eventName\":\"AssumeRole\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"lambda.amazonaws.com\",\"userAgent\":\"lambda.amazonaws.com\",\"requestParameters\":{\"roleArn\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\",\"roleSessionName\":\"EcommerceProductsFunction-prod\"},\"responseElements\":{\"credentials\":{\"accessKeyId\":\"ASIAWZRLANQHIAPCA2IW\",\"sessionToken\":\"IQoJb3JpZ2luX2VjECMaCXVzLWVhc3QtMSJIMEYCIQDcyPJ+D6Bk4X30qkf2dsvWR59CVRpEpPnT01FR/QZLxgIhALlMnKcM9roejui7GU71L+3GFvhkzg9ecnKuxq3OGGywKpwECOz//////////wEQABoMNDY3MTY3ODk4NjM4IgxD1YOHxUfStOJocPoq8AO7/TfbroyoGsNQrspIFTvNLkQ6RwNNvAXlNVfbHQh3BuXS9/LnYAVX/4VS3yO1e5bsqtXPLT2skmBYuuqV4qqAD0rb/QcXXVQQF6vLwVUHOokfvSMc3NZEhGKt7devIZEg3yjFiQPgXny9NbaI88fgq2Ak2ojpXB1SO3PmoTtXjMoks14nFnrWpg9PCAg6Wn6MgpJxkE+NOByWNuqMFFsxw/utsgRIMzT9IXpM7SrZUIh5GpE3S3DT1WO3h0fRfmUPImzXSLOapa3AuFsBu00goNGRJVFib5m8y5d/ZTU5Em0KTWC0rMzeZHIBujrXsSu4bi2wZxi8dDLPwzc8jm8pXvxj2bzHbTyoxISjSuVAr1hgX/z7rxjHHfrKRLDbT5s1Pw2Q9VlOUw/RhfKnnaMso/zsvqjefFB0xNsWo1K0g2ubYFS3xzgTmI1yRIVRn5owXXbklHdRcRC+imdVQXtO6+2brxUbfpLous35eeyJaAvSoBanDxut5Vt4mr6dKAqeRvqzRvZpCEnr7WV7WWsZn9Zap1xUxUIsyv9RiGkLfg2aHmWrkZrYt2Ttx2t69KxT5RpWmO2XXXWrznLzrTJJSY8wqqi+CGD4I/wz/VIZi6/5gMQXqz+xrZeElK5idgE4N0832pdUrzyVyZ3IQEflMMWa+NMGOqEBEPY0liUNw1lTq2aAZBbvDlUKYoPxREzSDJ4HnsSUCVUhLepYNTlDUJYXTIo8z7aYwLzqPrN/0V6gSr7oZ7wrf8Rjr3pWfbkziYMOkphGJAycY4LLpohParueNlDEv8KRqUrXleNqKEAaQIHFm3MhnQR+puLzzhiH49XY9gYneSsTqkBunXEzG8mFyjV4TxKEv796jTgI7IUrC0nRj9pTuSU=\",\"expiration\":\"2026-08-14T06:30:29Z\"},\"assumedRoleUser\":{\"assumedRoleId\":\"AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod\",\"arn\":\"arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod\"},\"packedPolicySize\":1},\"additionalEventData\":{\"ExtendedRequestId\":\"MTpJQUQ6QToxNzg2NjQ1ODI5OTg3OjlXdUtSYVJo\"},\"requestID\":\"3c7c99cd-be3d-4397-b0f4-ec7b5525ee3d\",\"eventID\":\"1d98cc49-d36d-3a23-a9b3-de1c723ffdec\",\"readOnly\":true,\"resources\":[{\"accountId\":\"467167898638\",\"type\":\"AWS::IAM::Role\",\"ARN\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\"}],\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"467167898638\",\"sharedEventID\":\"d141a4fb-acf0-4662-b7e4-2fdc47e648b7\",\"eventCategory\":\"Management\"}"
+        },
+        {
+            "EventId": "246ce6be-f019-324f-82dc-d79332c121dc",
+            "EventName": "AssumeRole",
+            "ReadOnly": "true",
+            "EventTime": "2026-08-13T15:30:29-03:00",
+            "EventSource": "sts.amazonaws.com",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::IAM::AccessKey",
+                    "ResourceName": "ASIAWZRLANQHPJYKLUFV"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::IAM::Role",
+                    "ResourceName": "arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW"
+                }
+            ],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AWSService\",\"invokedBy\":\"lambda.amazonaws.com\"},\"eventTime\":\"2026-08-13T18:30:29Z\",\"eventSource\":\"sts.amazonaws.com\",\"eventName\":\"AssumeRole\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"lambda.amazonaws.com\",\"userAgent\":\"lambda.amazonaws.com\",\"requestParameters\":{\"roleArn\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\",\"roleSessionName\":\"EcommerceProductsFunction-prod\"},\"responseElements\":{\"credentials\":{\"accessKeyId\":\"ASIAWZRLANQHPJYKLUFV\",\"sessionToken\":\"IQoJb3JpZ2luX2VjECMaCXVzLWVhc3QtMSJGMEQCIAmUUm3yU755N0/yCq6AEfOhTHOcMlYE0dK2Ot8YSpEhAiBwIMz9TC1FDt9Gn5mhdQpggfQ8RH0FWnT1XUqMWxcDyiqcBAjs//////////8BEAAaDDQ2NzE2Nzg5ODYzOCIMz4aXBtYtydf/GqlhKvAD1NsS6dDfQ3gXTPko9ZftKQklNXUe2j3Kjo6njabcf14Mb8WgSCSZsTa5a6FEtsvgt6A0dYi8LSWvv9NUaYkx9LzV6zoHMBcbNv0lI7e2z9sSOOxMUUkOX6XNm7BkBgJfg62noAV+WRazLxAGIp/ykUAIaDDrC8M8uwewcw+aO7ErpYGMgzZLnElKljTWErtjWn/qESWGy4rBtP1gCRVwUItdcch11D5ucITv4CzJDLiP02jWn8ErcQM1WsQCbeYqPS6wfU2lCK6rHVgqr7f5CLyOaHj+9Ily79p1LLBsfYvE/WwROj7ir3bNLMz+xapK6xKJITdnFHWY1e4hmVaoSfbCPeWeVWLDzsWJqsUa5ZwDI5oslcA3dK/8sLGcXH/zDTtbNsXQJgsfmT1nsLz1GGe++9ZrNX94meITevBVhiCJqPaFCZ0kskPhPLhoDZgxx9Yf1fwn9fWxzBu2I3l9KUMelTnVw9pA/minmb1iiBoL06ofcpg1lwqT7NP0/UYcsVsVWS+shGcqJjlogZHQTbuQcYdOcEE7WdIFLecZPH3TgI9Aa5TbS7IosQuibU9JeWgJpzI0cwdWJpwLco99aey5fc206OOaNFz9UX3E4dQW9qAjcL0RhGE4bFTnmctbl8gqEXhBD3FhraebtG3uZTDFmvjTBjqjAdn9p6DXbB39gPCKuxPOLGzQ/YSbeATWsbNDlzvllZ99CI73RicgXb9qN3MDNSi3/tmTFyajk507sFHSg3ZxAi3k82dYe+Db3xIvAYHInlIgs1RpLfkgME5d/S4DnJRBJFn6M+fx2XAuvhT45DKtGyIsh11wwFArr7cPnbJNBk1TON/R/L693suSQ8lGfJBbh7PrPr+VcgGgUPbw/XNuDka2qs8=\",\"expiration\":\"2026-08-14T06:30:29Z\"},\"assumedRoleUser\":{\"assumedRoleId\":\"AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod\",\"arn\":\"arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod\"},\"packedPolicySize\":1},\"additionalEventData\":{\"ExtendedRequestId\":\"MTpJQUQ6QToxNzg2NjQ1ODI5OTA2OkhUTGgxa3VE\"},\"requestID\":\"10781563-fa95-4166-ae9e-66ab62ff8e2c\",\"eventID\":\"246ce6be-f019-324f-82dc-d79332c121dc\",\"readOnly\":true,\"resources\":[{\"accountId\":\"467167898638\",\"type\":\"AWS::IAM::Role\",\"ARN\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\"}],\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"467167898638\",\"sharedEventID\":\"568341b4-b43e-4587-876c-9cd60124fbed\",\"eventCategory\":\"Management\"}"
+        },
+        {
+            "EventId": "2c9996a2-a403-3213-ac4c-cc7bf6b5530c",
+            "EventName": "AssumeRole",
+            "ReadOnly": "true",
+            "EventTime": "2026-08-13T15:30:29-03:00",
+            "EventSource": "sts.amazonaws.com",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::IAM::AccessKey",
+                    "ResourceName": "ASIAWZRLANQHA2TEAS7O"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::IAM::Role",
+                    "ResourceName": "arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW"
+                }
+            ],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AWSService\",\"invokedBy\":\"lambda.amazonaws.com\"},\"eventTime\":\"2026-08-13T18:30:29Z\",\"eventSource\":\"sts.amazonaws.com\",\"eventName\":\"AssumeRole\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"lambda.amazonaws.com\",\"userAgent\":\"lambda.amazonaws.com\",\"requestParameters\":{\"roleArn\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\",\"roleSessionName\":\"EcommerceProductsFunction-prod\"},\"responseElements\":{\"credentials\":{\"accessKeyId\":\"ASIAWZRLANQHA2TEAS7O\",\"sessionToken\":\"IQoJb3JpZ2luX2VjECMaCXVzLWVhc3QtMSJGMEQCIC5xY6CgF9LYpUbwIzqY7u7KB8l8Xfq474J/pHZA1p0GAiA8ieBMU3cs2v7vQhgpAwbYrnBGu3jsuOTFaojOMTxAmyqcBAjs//////////8BEAAaDDQ2NzE2Nzg5ODYzOCIM/lRjkMCEwAwtvWwWKvADzhjwIaW3qOEfi7EVJVFUP0CftahUKV+eZXJQToSsg+4mDBDlB4owEqWaHTOmspdFo/YBtOvsfwzDW1uowevzZYMlI6nNII5bLxnD/qIhh3eUmkhFOc4xJHP3BdNK2MbjnRa/cfcvnw/JuxltkfNC2qqVGcqh+CMtAZQnp6TwGU2P8RdjZakEvPVJ9aQIOiglJazIfnZ8OciKiQ/LEYY0/hFF/j0CNNd7Fbuj+c0oXh5Gs+1RHiS1bKiCFwjEFpVjbGtCPnxXDmiz6gsLMIVjslgwboQp1r2e1MSdaeLTANmrkpYoOnlMKXm/n5N+G/+DTYUN9sxQG6cD4gULlYxCR79TaQenwOMxFba7Ykx1UsKR0iJpMxIy9mvm1/g04QbCGd5/d/QEM4iT8IENT/NpTw9/EbJtr4yQjcZbF+191AUv9iYEgJ8w3B5dSepKrvRwRbboDWi6Vwc05tH23Q2xL7eR6LgUQHKkkHd50MqQAxooMrL4wEooN6fNWM3t0McFx+0mRImgOK9FLoNPZi43G05XKGW8GRjLmJM1dRNyCWO9nzosEO6WycCo2f7svLeghUTRDTYC88PMjRNuwgpSh5mpLRA0GVVYALs4DGwFOQvhkc+QSEmpaPZflZVhjBbffxNG5IrVzKWF+o41pBvGnjDFmvjTBjqjAUbsHE/MfwUADDT313a0ob4VN2W5NKpzMj89shErjCNTkk+hwCa0zYczkOM3fSrNMZlN2j4X1WKYx6trh9A/WUzvT7d6b4ZndStGqBivZbgbo3M972+umpL1T4vICuqCG/ox3aczTqCChFIao/10E5NAkyVcRbFFepyU/fsFuHyGU7HFC+nNJLQs7eyG9a/39Arn8JKjuLbXpcGj0a04HVbdY+U=\",\"expiration\":\"2026-08-14T06:30:29Z\"},\"assumedRoleUser\":{\"assumedRoleId\":\"AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod\",\"arn\":\"arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod\"},\"packedPolicySize\":1},\"additionalEventData\":{\"ExtendedRequestId\":\"MTpJQUQ6QToxNzg2NjQ1ODI5ODk1OnFWUzFwMVEx\"},\"requestID\":\"fff371da-7f3e-4548-8696-6671c3d41291\",\"eventID\":\"2c9996a2-a403-3213-ac4c-cc7bf6b5530c\",\"readOnly\":true,\"resources\":[{\"accountId\":\"467167898638\",\"type\":\"AWS::IAM::Role\",\"ARN\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\"}],\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"467167898638\",\"sharedEventID\":\"46cdf769-a4a0-4d30-bd8b-3661636475f4\",\"eventCategory\":\"Management\"}"
+        },
+        {
+            "EventId": "30c64dab-9688-3982-bdd8-cbaedcf9ff2c",
+            "EventName": "AssumeRole",
+            "ReadOnly": "true",
+            "EventTime": "2026-08-13T15:30:29-03:00",
+            "EventSource": "sts.amazonaws.com",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::IAM::AccessKey",
+                    "ResourceName": "ASIAWZRLANQHCNK6VAWN"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::IAM::Role",
+                    "ResourceName": "arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW"
+                }
+            ],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AWSService\",\"invokedBy\":\"lambda.amazonaws.com\"},\"eventTime\":\"2026-08-13T18:30:29Z\",\"eventSource\":\"sts.amazonaws.com\",\"eventName\":\"AssumeRole\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"lambda.amazonaws.com\",\"userAgent\":\"lambda.amazonaws.com\",\"requestParameters\":{\"roleArn\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\",\"roleSessionName\":\"EcommerceProductsFunction-prod\"},\"responseElements\":{\"credentials\":{\"accessKeyId\":\"ASIAWZRLANQHCNK6VAWN\",\"sessionToken\":\"IQoJb3JpZ2luX2VjECMaCXVzLWVhc3QtMSJHMEUCIQCmyVzjphaJEW4xqyG+fK1ARNEMxNGP8I8dLf9IumImsAIgT2t0OKbU5fnWaQk+YuZ3CRfc1Ad8oXufOx08oYcjMp0qrAII7P//////////ARAAGgw0NjcxNjc4OTg2MzgiDDmYuL1yCAne/vHQviqAAg4YYnlb1Fu1tpQo5IxzgeCIZVMw+mihNPhHhSCo9d5lc5gVIHGd69z/+XoUNjxn8aeys32dgf72EVndJckSKM9u2ZA62s+Jlf3aM2muMUKgM0ZpxQY0baXf0aH6LB0mA9UF40y5RH07N6YendvgPQbbzaGaIGpDJsHcPo67DTheLjCh2whwW1G4OqOvm1Kua1TcenhyUSAntU7Wqv5o/V48lfyMKb8ZouXIMcP+mOB71cUkw1TdCcS6jMQxInFfjiWOnh/OT6NFi0DxRSoHBJCcreB6Syeoi9xJNU6p6pKUeQVblmntZv93bDX1cHOpuQbRgircR3/xmjjqblxrGrswxZr40wY6mgE30YRSN3KekKvEC2nuwkk01A0JlufFbiUwv67w4ggFLAhX9J5cgKHokQ5ICpLnFbXRwuJWSaqIrJPcTTd3FMYHoWS6ej7d8CxDiyAXaOLvYdTmFu7KnkIPOZ1qgZVvta7r0d7HdgUOa78zgYiLD8Njrkys+Cs17Euaq1uA79zQWHaSga/mAPUgdFbb9K7VokY9S6Weh6aF7Qx0\",\"expiration\":\"2026-08-14T06:30:29Z\"},\"assumedRoleUser\":{\"assumedRoleId\":\"AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod\",\"arn\":\"arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod\"},\"packedPolicySize\":1},\"additionalEventData\":{\"ExtendedRequestId\":\"MTpJQUQ6QToxNzg2NjQ1ODI5OTAyOnpRc0ZSWDRR\"},\"requestID\":\"177ca1bb-c81a-4ea1-b1a3-bd8aa4c7016f\",\"eventID\":\"30c64dab-9688-3982-bdd8-cbaedcf9ff2c\",\"readOnly\":true,\"resources\":[{\"accountId\":\"467167898638\",\"type\":\"AWS::IAM::Role\",\"ARN\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\"}],\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"467167898638\",\"sharedEventID\":\"7a3a05c0-3b56-422d-b8f1-25071b1ac349\",\"eventCategory\":\"Management\"}"
+        },
+        {
+            "EventId": "3159776f-35f9-3dfe-879a-768137f287ce",
+            "EventName": "AssumeRole",
+            "ReadOnly": "true",
+            "EventTime": "2026-08-13T15:30:29-03:00",
+            "EventSource": "sts.amazonaws.com",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::IAM::AccessKey",
+                    "ResourceName": "ASIAWZRLANQHKRULWTJO"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::IAM::Role",
+                    "ResourceName": "arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW"
+                }
+            ],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AWSService\",\"invokedBy\":\"lambda.amazonaws.com\"},\"eventTime\":\"2026-08-13T18:30:29Z\",\"eventSource\":\"sts.amazonaws.com\",\"eventName\":\"AssumeRole\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"lambda.amazonaws.com\",\"userAgent\":\"lambda.amazonaws.com\",\"requestParameters\":{\"roleArn\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\",\"roleSessionName\":\"EcommerceProductsFunction-prod\"},\"responseElements\":{\"credentials\":{\"accessKeyId\":\"ASIAWZRLANQHKRULWTJO\",\"sessionToken\":\"IQoJb3JpZ2luX2VjECMaCXVzLWVhc3QtMSJGMEQCIEmrxMh85dVtf0fQ/kKD+wftUSZA8ywspsJmGEJhiGMrAiBA47ss7QuM8LnsUIypWvZgt8SaBjHY0CLIgUbH61x2PyqcBAjs//////////8BEAAaDDQ2NzE2Nzg5ODYzOCIMr8iWx+hLu9OtpuEjKvAD1fub9XG/t+8pC2qI5BbKV+1w13YsAGwQs6mCB1ZErLqrRibKajw+c7TQ2+Ksa4kYNoq4Ip7fgG72HnR3d35P8YqdiWdTVESRqDO6VgbbOHmx04ZEMW+gG0nGE6BxPw9GfmF6hSArlQvwfEBV6xzIphv+wZL69NOi/SkItIb3whdyI50XDmCgoQyxfX0AtlbFgvANtZixLs3d2uWGnC7qV6Nbf18q+AmY4n3JeQ1ufHX/hadDbTZX6mgAtZPNnlVUq8+U3tj7QI1+s4N/iSsVWqvYdrAH9AQ2ClTUvc7ph+y/UTO8DT016hE14JTPo8/lXZgYRu2NvpXTlcs6gKUPt7UFinHSPAIiv68fg1A6Ou2ye2cQG1gSN+xdXGLwUh55iVczZggVphgnbCSoHCI3PAX8sPlyOqHua2P78hxUF9YNGzDylGDQqicyNkb8Hnb9FJ93lSl6Cfx9yWsVXGTPaAxaqH9XT48cFK9JvA9m1e96QteP6uKQViUDiuMOi9W8VR90uDCBM85Blbo+saiToy0cRom8K49CQ55VEPx+Cw2B9IE6wfc7UlL4NEGLOpcnQRKZPdlUF/uNmMztgXe9A7ct0GLGiPJPymEOLIRiNZIKNTCU7mWQVdydkCL0nxoVsD84LuV6O2tCp7EyJwXzPjDFmvjTBjqjASyjLj6CWsbRtHhczws/c1OnvyOMjS9e5udEEeuExc5ud729a8qIpTv0YVMelWIwMKroW7XpubWknNbpgralSb//ZE0P4u2ln5/VGgm12qRpXKCMjuLZMSS9gridvT2OTGzLbdhX2WFQS1gKPlbpDA9i0QfzCoefNZEXQ++7XTKe1CA8DIfrUNd8GjldRy2weUOfDOOUnYZU1PfYSvRoNsFC47Q=\",\"expiration\":\"2026-08-14T06:30:29Z\"},\"assumedRoleUser\":{\"assumedRoleId\":\"AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod\",\"arn\":\"arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod\"},\"packedPolicySize\":1},\"additionalEventData\":{\"ExtendedRequestId\":\"MTpJQUQ6QToxNzg2NjQ1ODI5ODk0OkEzYTdHa2l6\"},\"requestID\":\"b6037dd0-ffad-4a2a-b13c-0f97c98ff8b5\",\"eventID\":\"3159776f-35f9-3dfe-879a-768137f287ce\",\"readOnly\":true,\"resources\":[{\"accountId\":\"467167898638\",\"type\":\"AWS::IAM::Role\",\"ARN\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\"}],\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"467167898638\",\"sharedEventID\":\"349be566-8e9a-4c57-aed1-2a0b084db579\",\"eventCategory\":\"Management\"}"
+        },
+        {
+            "EventId": "3780e4f2-df42-3357-a86e-b877981c1d52",
+            "EventName": "AssumeRole",
+            "ReadOnly": "true",
+            "EventTime": "2026-08-13T15:30:29-03:00",
+            "EventSource": "sts.amazonaws.com",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::IAM::AccessKey",
+                    "ResourceName": "ASIAWZRLANQHCTU4R7TR"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::STS::AssumedRole",
+                    "ResourceName": "AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod"
+                },
+                {
+                    "ResourceType": "AWS::IAM::Role",
+                    "ResourceName": "arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW"
+                }
+            ],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AWSService\",\"invokedBy\":\"lambda.amazonaws.com\"},\"eventTime\":\"2026-08-13T18:30:29Z\",\"eventSource\":\"sts.amazonaws.com\",\"eventName\":\"AssumeRole\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"lambda.amazonaws.com\",\"userAgent\":\"lambda.amazonaws.com\",\"requestParameters\":{\"roleArn\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\",\"roleSessionName\":\"EcommerceProductsFunction-prod\"},\"responseElements\":{\"credentials\":{\"accessKeyId\":\"ASIAWZRLANQHCTU4R7TR\",\"sessionToken\":\"IQoJb3JpZ2luX2VjECMaCXVzLWVhc3QtMSJHMEUCIQDccbUNyZ/7wYIc1Hz0otO+TaV28MkQpDfyvl76pVhrhwIgYgmno21t0GgCOainsTKb4/g6H5YbcLTMZ3BSlFQkGN8qrAII7P//////////ARAAGgw0NjcxNjc4OTg2MzgiDBjHtWP0D/mcEt6epiqAArawcn3OO71h3vBwvdPgWNWuQAAeQ7R7mN6kasXHbORuinq5FSjrBGvB0t1XoIzlfEDVYmVGxmF05ixgsb0gCRMG3OAnVHRviJpH5PspuT+dYngOjwSLRwrQ4kL7yAHvulxF8fi2qrvJAOnFDeFEa6YkQLQoYQy/Zrk+/AdRxE9WwCIsGQQdc9/6jJIiiSeGTMy2XBS8p0ijZ1+dLmk65VCyympKsI8FLrhRUZ2lY3JCvUjgiHHhRtEKmUdVoBm13rd8o+M6yQSeLZcKvfOC/HUIwdsNcChmC1FX+MQbcZk7KpqDLSISNqjsnCm6wAStIxlIDjawanFaia4sgXH8h5MwxZr40wY6mgEeWRiQkF133wF3M0VsREebtIgm2DHZ801woz58PDEGl3AeY7VoRfqCi5cAoyntT5qTbUgekP47S1+DWpA02hx3s6V3iHCrsSda1YQe+GzCn3QsDWMRz+sMzkrBPpWzZno11wBQsQ6YmJiEXEYHFJtAkz+tX38P3bJSyLWutGF3x5xjxB9RWzTu/vGupDlBItDYeVlLH5SIc2s5\",\"expiration\":\"2026-08-14T06:30:29Z\"},\"assumedRoleUser\":{\"assumedRoleId\":\"AROAWZRLANQHIAOUTVTGN:EcommerceProductsFunction-prod\",\"arn\":\"arn:aws:sts::467167898638:assumed-role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW/EcommerceProductsFunction-prod\"},\"packedPolicySize\":1},\"additionalEventData\":{\"ExtendedRequestId\":\"MTpJQUQ6QToxNzg2NjQ1ODI5ODk1OlpNRDdDNjBt\"},\"requestID\":\"55c6c141-0e18-4244-be2a-360d6651d7a1\",\"eventID\":\"3780e4f2-df42-3357-a86e-b877981c1d52\",\"readOnly\":true,\"resources\":[{\"accountId\":\"467167898638\",\"type\":\"AWS::IAM::Role\",\"ARN\":\"arn:aws:iam::467167898638:role/EcommerceProd-App-ProductsFunctionServiceRole8A7C61-iyg1MZPsJ8cW\"}],\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"467167898638\",\"sharedEventID\":\"d3924ff2-7df6-4709-bfb9-586d41ff7205\",\"eventCategory\":\"Management\"}"
+        }
+    ],
+    "NextToken": "cSEcRKGCeGxyPKCiWrhdCBBwQLKStpgXEqicyVs8IZyMKTzKrTaHzsn8BAiSOa2pfI9znfL6l2mXHINQglKAgw=="
+}

@@ -68,6 +68,32 @@ export class IamAgentRolesStack extends cdk.Stack {
       })
     );
 
+    // Extensao de permissao pos-Cenario 3 (rodada CDK): sem acesso ao bucket
+    // de assets do CDK nem a lambda:GetFunction, o agente nao consegue ler
+    // o codigo-fonte real da Lambda, forcando inferencia a partir de logs
+    // de erro - o que levou a uma causa raiz especifica incorreta na
+    // investigacao anterior. Ver docs/RUNBOOK.md para o achado completo.
+    this.agentSpaceRole.addToPolicy(
+      new iam.PolicyStatement({
+        sid: 'AllowReadCdkAssets',
+        effect: iam.Effect.ALLOW,
+        actions: ['s3:GetObject'],
+        resources: [
+          `arn:aws:s3:::cdk-hnb659fds-assets-${this.account}-${this.region}/*`,
+        ],
+      })
+    );
+    this.agentSpaceRole.addToPolicy(
+      new iam.PolicyStatement({
+        sid: 'AllowGetFunctionCode',
+        effect: iam.Effect.ALLOW,
+        actions: ['lambda:GetFunction', 'lambda:GetFunctionConfiguration'],
+        resources: [
+          `arn:aws:lambda:${this.region}:${this.account}:function:Ecommerce*`,
+        ],
+      })
+    );
+
     // --- Role de operador (acesso humano ao portal web) ---
     this.webappAdminRole = new iam.Role(this, 'WebappAdminRole', {
       roleName: 'DevOpsAgentRole-WebappAdmin',
@@ -102,3 +128,4 @@ export class IamAgentRolesStack extends cdk.Stack {
     cdk.Tags.of(this).add('environment', config.envName);
   }
 }
+

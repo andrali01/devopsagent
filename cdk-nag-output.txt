@@ -1,0 +1,81 @@
+Unknown option(s): --all. These will be ignored. Run 'cdk --help' to see available options.
+ERROR AwsSolutions-IAM5[Action::cloudformation:*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Action::lambda:*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Resource::arn:aws:cloudformation:us-east-1:467167898638:stack/Ecommerce*/*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Resource::arn:aws:lambda:us-east-1:467167898638:function:EcommerceProductsFunction-*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Action::dynamodb:*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Resource::arn:aws:dynamodb:us-east-1:467167898638:table/EcommerceProducts-*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Resource::arn:aws:iam::467167898638:role/*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Action::aidevops:*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Action::apigateway:*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Action::devops-agent:*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Resource::*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Action::s3:*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Resource::arn:aws:s3:::cdk-hnb659fds-assets-467167898638-us-east-1*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM5[Resource::arn:aws:ssm:us-east-1:467167898638:parameter/cdk-bootstrap/*]: The IAM entity contains wildcard permissions and does not have a cdk-nag rule suppression with evidence for those permission. Metadata explaining the evidence (e.g. via supporting links) for wildcard permissions allows for transparency to operators. This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Action::<action>' for policy actions and 'Resource::<resource>' for resources. Example: appliesTo: ['Action::s3:*']. (Construct Annotations)
+   EcommerceProd-GithubOidc/GithubActionsDeployRole/DefaultPolicy/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM4[Policy::arn:<AWS::Partition>:iam::aws:policy/AIDevOpsAgentAccessPolicy]: The IAM user, role, or group uses AWS managed policies. An AWS┬ámanaged policy┬áis a standalone┬ápolicy┬áthat is created and administered by AWS. Currently, many AWS managed policies do not restrict resource scope. Replace AWS managed policies with system specific (customer) managed policies.This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Policy::<policy>' for AWS managed policies. Example: appliesTo: ['Policy::arn:<AWS::Partition>:iam::aws:policy/foo']. (Construct Annotations)
+   EcommerceProd-IamAgentRoles/AgentSpaceRole/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM4[Policy::arn:<AWS::Partition>:iam::aws:policy/AIDevOpsOperatorAppAccessPolicy]: The IAM user, role, or group uses AWS managed policies. An AWS┬ámanaged policy┬áis a standalone┬ápolicy┬áthat is created and administered by AWS. Currently, many AWS managed policies do not restrict resource scope. Replace AWS managed policies with system specific (customer) managed policies.This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Policy::<policy>' for AWS managed policies. Example: appliesTo: ['Policy::arn:<AWS::Partition>:iam::aws:policy/foo']. (Construct Annotations)
+   EcommerceProd-IamAgentRoles/WebappAdminRole/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-IAM4[Policy::arn:<AWS::Partition>:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole]: The IAM user, role, or group uses AWS managed policies. An AWS┬ámanaged policy┬áis a standalone┬ápolicy┬áthat is created and administered by AWS. Currently, many AWS managed policies do not restrict resource scope. Replace AWS managed policies with system specific (customer) managed policies.This is a granular rule that returns individual findings that can be suppressed with 'appliesTo'. The findings are in the format 'Policy::<policy>' for AWS managed policies. Example: appliesTo: ['Policy::arn:<AWS::Partition>:iam::aws:policy/foo']. (Construct Annotations)
+   EcommerceProd-App/ProductsFunction/ServiceRole/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-APIG1: The API does not have access logging enabled. Enabling access logs helps operators view who accessed an API and how the caller accessed the API. (Construct Annotations)
+   EcommerceProd-App/ProductsApi/DefaultStage/Resource
+   Rule Construct-Annotations::error-annotation
+
+ERROR AwsSolutions-APIG4: The API does not implement authorization. In most cases an API needs to have an authentication and authorization implementation strategy. This includes using such approaches as IAM, Cognito User Pools, Custom authorizer, etc. (Construct Annotations)
+   EcommerceProd-App/ProductsApi/ANY--products/Resource
+   Rule Construct-Annotations::error-annotation
+
+WARNING No cross-stack-reference strength configured, defaulting to "strong". We recommend you set feature flag "@aws-cdk/core:defaultCrossStackReferences" to "both", then deploy everywhere, then set it to "weak". Alternatively, set it to "strong" explicitly to lock in the current producer-protecting behavior. (See: https://github.com/aws/aws-cdk/blob/main/packages/aws-cdk-lib/README.md#reference-strength) (Construct Annotations)
+   EcommerceProd-AgentSpace
+   Acknowledge with 'Construct-Annotations::@aws-cdk/core:crossStackReferencesDefaultStrong'
+Synthesis finished with errors

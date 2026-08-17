@@ -6,6 +6,8 @@ import { IamAgentRolesStack } from '../lib/iam-agent-roles-stack';
 import { AgentSpaceStack } from '../lib/agent-space-stack';
 import { EcommerceAppStack } from '../lib/ecommerce-app-stack';
 import { GithubOidcStack } from '../lib/github-oidc-stack';
+import { SecurityAgentRoleStack } from '../lib/security-agent-role-stack';
+import { SecurityAgentSpaceStack } from '../lib/security-agent-space-stack';
 
 const app = new cdk.App();
 
@@ -59,3 +61,19 @@ agentSpaceStack.addStackDependency(iamStack);
 // entre os dois stacks. Isso reflete a mesma ordem do laboratorio manual
 // (Passos 24-27 antes do Passo 19) e evita corridas de criacao desnecessarias.
 agentSpaceStack.addStackDependency(appStack);
+
+// --- AWS Security Agent (novo) ---
+const securityRoleStack = new SecurityAgentRoleStack(app, `${prefix}-SecurityAgentRole`, {
+  env,
+  config,
+  description: `IAM role do AWS Security Agent - ambiente ${config.envName}`,
+});
+
+const securitySpaceStack = new SecurityAgentSpaceStack(app, `${prefix}-SecurityAgentSpace`, {
+  env,
+  config,
+  serviceRole: securityRoleStack.serviceRole,
+  description: `Application + AgentSpace do AWS Security Agent - ambiente ${config.envName}`,
+});
+securitySpaceStack.addStackDependency(securityRoleStack);
+securitySpaceStack.addStackDependency(appStack);
