@@ -1,6 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import { NagSuppressions } from 'cdk-nag';
 import { EnvConfig } from './config';
 
 export interface IamAgentRolesStackProps extends cdk.StackProps {
@@ -72,7 +73,8 @@ export class IamAgentRolesStack extends cdk.Stack {
     // de assets do CDK nem a lambda:GetFunction, o agente nao consegue ler
     // o codigo-fonte real da Lambda, forcando inferencia a partir de logs
     // de erro - o que levou a uma causa raiz especifica incorreta na
-    // investigacao anterior. Ver docs/RUNBOOK.md para o achado completo.
+    // investigacao anterior. Validado via IAM Policy Simulator antes de
+    // aplicar (ver docs/RUNBOOK.md).
     this.agentSpaceRole.addToPolicy(
       new iam.PolicyStatement({
         sid: 'AllowReadCdkAssets',
@@ -124,8 +126,54 @@ export class IamAgentRolesStack extends cdk.Stack {
       description: 'ARN da role de operador do portal web',
     });
 
+    // AwsSolutions-IAM4: AIDevOpsAgentAccessPolicy e AIDevOpsOperatorAppAccessPolicy
+    // sao as UNICAS managed policies oficialmente testadas e suportadas pela
+    // AWS para essas duas roles (documentado no guia oficial de seguranca do
+    // AWS DevOps Agent e no Modulo 6.3 da trilha de especializacao). Trocar
+    // por policy customizada iria contra a recomendacao oficial da AWS, nao
+    // a favor de seguranca.
+    NagSuppressions.addResourceSuppressions(this.agentSpaceRole, [
+      {
+        id: 'AwsSolutions-IAM4',
+        reason:
+          'AIDevOpsAgentAccessPolicy e a unica managed policy oficialmente testada e suportada pela AWS para a role do Agent Space.',
+        appliesTo: ['Policy::arn:<AWS::Partition>:iam::aws:policy/AIDevOpsAgentAccessPolicy'],
+      },
+    ]);
+
+    // AwsSolutions-IAM5: os dois wildcards abaixo sao a extensao de
+    // permissao pos-Cenario 3 (ver comentario na PolicyStatement acima).
+    // Necessarios porque o CDK gera nomes de asset S3 dinamicos (hash do
+    // conteudo) e o Agent Space monitora multiplas funcoes Lambda com
+    // prefixo Ecommerce - nao ha como escopar mais sem quebrar o proposito
+    // (permitir ao agente ler codigo real durante investigacoes).
+    NagSuppressions.addResourceSuppressions(
+      this.agentSpaceRole,
+      [
+        {
+          id: 'AwsSolutions-IAM5',
+          reason:
+            'Wildcards necessarios: hash de asset S3 gerado dinamicamente pelo CDK, e a role monitora multiplas funcoes Lambda com prefixo Ecommerce. Extensao validada via IAM Policy Simulator (ver docs/RUNBOOK.md).',
+          appliesTo: [
+            `Resource::arn:aws:s3:::cdk-hnb659fds-assets-${this.account}-${this.region}/*`,
+            `Resource::arn:aws:lambda:${this.region}:${this.account}:function:Ecommerce*`,
+          ],
+        },
+      ],
+      true // applyToChildren: os wildcards estao numa policy INLINE filha (DefaultPolicy), nao na role em si.
+    );
+    NagSuppressions.addResourceSuppressions(this.webappAdminRole, [
+      {
+        id: 'AwsSolutions-IAM4',
+        reason:
+          'AIDevOpsOperatorAppAccessPolicy e a unica managed policy oficialmente testada e suportada pela AWS para a role de operador do portal web.',
+        appliesTo: [
+          'Policy::arn:<AWS::Partition>:iam::aws:policy/AIDevOpsOperatorAppAccessPolicy',
+        ],
+      },
+    ]);
+
     cdk.Tags.of(this).add('project', 'devops-agent-platform');
     cdk.Tags.of(this).add('environment', config.envName);
   }
 }
-

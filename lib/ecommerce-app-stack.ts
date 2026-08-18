@@ -108,7 +108,7 @@ export class EcommerceAppStack extends cdk.Stack {
     // anonimo aqui para confirmar posse do dominio, antes de qualquer
     // pentest ser autorizado. So devolve um token estatico, sem acesso a
     // dados reais - superficie de risco minima e aceitavel.
-    httpApi.addRoutes({
+    const verificationRoutes = httpApi.addRoutes({
       path: '/.well-known/aws/securityagent-domain-verification.json',
       methods: [apigwv2.HttpMethod.GET],
       integration: new HttpLambdaIntegration('DomainVerificationIntegration', fn),
@@ -123,11 +123,28 @@ export class EcommerceAppStack extends cdk.Stack {
     // implantado (logical-id auto-gerado, ver nota acima). Suprimido
     // temporariamente ate uma migracao controlada do stage ser feita -
     // nao e ausencia permanente de intencao, e divida tecnica registrada.
-    NagSuppressions.addResourceSuppressions(httpApi, [
+    NagSuppressions.addResourceSuppressions(
+      httpApi,
+      [
+        {
+          id: 'AwsSolutions-APIG1',
+          reason:
+            'Access logging temporariamente suprimido - migrar para CfnStage explicito exigiria substituir o stage $default real (colisao de logical-id). Ver docs/RUNBOOK.md para o plano de migracao controlada.',
+        },
+      ],
+      true // applyToChildren: a regra APIG1 e avaliada no Stage implicito (filho do HttpApi), nao no HttpApi em si.
+    );
+
+    // AwsSolutions-APIG4 (rota de verificacao de dominio): suprimida
+    // pontualmente, so para esta rota especifica - NAO para /products
+    // (que ja tem HttpIamAuthorizer). Deliberadamente publica por exigencia
+    // do metodo de verificacao HTTP_ROUTE do AWS Security Agent (ver
+    // comentario acima da rota). So devolve um token estatico.
+    NagSuppressions.addResourceSuppressions(verificationRoutes, [
       {
-        id: 'AwsSolutions-APIG1',
+        id: 'AwsSolutions-APIG4',
         reason:
-          'Access logging temporariamente suprimido - migrar para CfnStage explicito exigiria substituir o stage $default real (colisao de logical-id). Ver docs/RUNBOOK.md para o plano de migracao controlada.',
+          'Rota de verificacao de dominio HTTP_ROUTE do AWS Security Agent - deliberadamente publica, exigencia do proprio metodo de verificacao. So devolve um token estatico, sem acesso a dados.',
       },
     ]);
 

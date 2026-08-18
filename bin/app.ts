@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
+import { Aspects } from 'aws-cdk-lib';
+import { AwsSolutionsChecks } from 'cdk-nag';
 import { getEnvConfig, capitalize } from '../lib/config';
 import { IamAgentRolesStack } from '../lib/iam-agent-roles-stack';
 import { AgentSpaceStack } from '../lib/agent-space-stack';
@@ -63,6 +65,9 @@ agentSpaceStack.addStackDependency(iamStack);
 agentSpaceStack.addStackDependency(appStack);
 
 // --- AWS Security Agent (novo) ---
+// Segue a mesma logica de dependencia: a role precisa existir antes do
+// Application, que precisa existir antes do AgentSpace (que referencia a
+// Lambda da EcommerceAppStack para dar contexto de code review).
 const securityRoleStack = new SecurityAgentRoleStack(app, `${prefix}-SecurityAgentRole`, {
   env,
   config,
@@ -77,3 +82,9 @@ const securitySpaceStack = new SecurityAgentSpaceStack(app, `${prefix}-SecurityA
 });
 securitySpaceStack.addStackDependency(securityRoleStack);
 securitySpaceStack.addStackDependency(appStack);
+
+// cdk-nag: aplica verificacoes automatizadas de seguranca (AWS Solutions
+// rules) contra os templates sintetizados de TODOS os stacks acima, antes
+// de qualquer deploy. Retomado apos pausa - ver docs/RUNBOOK.md (secao
+// sobre a causa raiz do bug de stage que interrompeu a primeira tentativa).
+Aspects.of(app).add(new AwsSolutionsChecks({ verbose: true }));

@@ -1,6 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import { NagSuppressions } from 'cdk-nag';
 import { EnvConfig } from './config';
 
 export interface SecurityAgentRoleStackProps extends cdk.StackProps {
@@ -76,6 +77,41 @@ export class SecurityAgentRoleStack extends cdk.Stack {
       value: this.serviceRole.roleArn,
       description: 'ARN da role usada pelo Application do AWS Security Agent',
     });
+
+    // AwsSolutions-IAM4: AWSSecurityAgentWebAppPolicy e a unica managed
+    // policy oficialmente documentada pela AWS para a role do Application
+    // do Security Agent (docs.aws.amazon.com/securityagent/.../security-iam-awsmanpol.html).
+    // Mesmo raciocinio das managed policies do AWS DevOps Agent.
+    NagSuppressions.addResourceSuppressions(this.serviceRole, [
+      {
+        id: 'AwsSolutions-IAM4',
+        reason:
+          'AWSSecurityAgentWebAppPolicy e a unica managed policy oficialmente documentada pela AWS para a role do Application do Security Agent.',
+        appliesTo: [
+          'Policy::arn:<AWS::Partition>:iam::aws:policy/service-role/AWSSecurityAgentWebAppPolicy',
+        ],
+      },
+    ]);
+
+    // AwsSolutions-IAM5: wildcard necessario porque o Security Agent cria
+    // multiplos log streams dinamicamente por execucao (Code Review, Pentest,
+    // Threat Model), sem nomes previsiveis com antecedencia. Escopo ja
+    // restrito ao namespace /aws/securityagent/* - nao e um wildcard total.
+    NagSuppressions.addResourceSuppressions(
+      this.serviceRole,
+      [
+        {
+          id: 'AwsSolutions-IAM5',
+          reason:
+            'Wildcard necessario para ler log streams gerados dinamicamente pelo Security Agent (nomes nao previsiveis com antecedencia). Escopo ja restrito ao namespace /aws/securityagent/*.',
+          appliesTo: [
+            `Resource::arn:aws:logs:${this.region}:${this.account}:log-group:/aws/securityagent/*`,
+            `Resource::arn:aws:logs:${this.region}:${this.account}:log-group:/aws/securityagent/*:*`,
+          ],
+        },
+      ],
+      true
+    );
 
     cdk.Tags.of(this).add('project', 'devops-agent-platform');
     cdk.Tags.of(this).add('environment', config.envName);
