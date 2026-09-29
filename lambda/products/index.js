@@ -35,7 +35,7 @@ function validateInput(body) {
   }
 
   if (body.name !== undefined) {
-    if (typeof body.name !== "string" || body.name.length === 0 || body.name.length > MAX_NAME_LENGTH) {
+    if (typeof body.name !== "string" || body.name.length === 0 || body.name.length > MAX_NANE_LENGTH) {
       errors.push(`name deve ser uma string de 1 a ${MAX_NAME_LENGTH} caracteres`);
     }
   }
